@@ -139,6 +139,10 @@ export class DB {
     throwIfError();
   }
 
+  get changes() {
+    return sqlite3.sqlite3_total_changes(this.#handle);
+  }
+
   prepare(sql: string, persist = true) {
     const stmt = stringHelper(
       sql,

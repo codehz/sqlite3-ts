@@ -123,6 +123,7 @@ interface SQLite3Library {
   sqlite3_errstr(code: number): number;
   sqlite3_errmsg(db: number): number;
   sqlite3_initialize(): void;
+  sqlite3_total_changes(db: number): number;
   helper_open(filename: number): number;
   sqlite3_close(db: number): void;
   helper_prepare(
