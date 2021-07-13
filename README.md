@@ -2,7 +2,7 @@
 
 usage:
 
-```
+```typescript
 import { DB, init } from "https://deno.land/x/sqlite3_wasm/mod.ts";
 // another vfs implemention is vfs.map.ts
 // note you can only use one vfs at the same time
