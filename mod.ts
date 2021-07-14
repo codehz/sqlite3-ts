@@ -153,7 +153,7 @@ export class DB {
   }
 
   exec(sql: string, param: Parameter = {}) {
-    this.prepare(sql, false).excute(param).destroy();
+    this.prepare(sql, false).execute(param).destroy();
   }
 
   session(name = "main") {
@@ -445,7 +445,7 @@ export class Statement {
     }
   }
 
-  excute(obj: Parameter = {}): Statement {
+  execute(obj: Parameter = {}): Statement {
     try {
       this.bindAll(obj);
       const ret = this.step();
